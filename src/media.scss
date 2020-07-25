@@ -1,0 +1,23 @@
+@media only screen and (min-width: 375px) {
+    .card-container{
+     height: 370px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .card-container{
+     height: 450px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card-container{
+     height: 450px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .card-container{
+     height: 470px;
+    }
+}
