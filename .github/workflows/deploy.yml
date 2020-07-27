@@ -1,5 +1,8 @@
 name: Build an angular project
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
