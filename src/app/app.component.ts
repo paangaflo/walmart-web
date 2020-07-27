@@ -1,13 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import {  } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  public word: string;
+  searchForm;
 
-  public word: string = "";
+  constructor(
+    private formBuilder: FormBuilder,
+  ){
+    this.searchForm = this.formBuilder.group({
+      search: "",
+    });
+  }
 
-  constructor(){}
+  ngOnInit() {
+    this.word = "";
+  }
+
+  onSubmit(object) {
+    this.word = object.search;
+    this.searchForm.reset();
+  }
 }
