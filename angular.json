@@ -75,7 +75,7 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "walmart-web:build:production",
+              "browserTarget": "walmart-web:build:production"
             }
           }
         },

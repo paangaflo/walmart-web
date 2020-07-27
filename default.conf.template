@@ -1,5 +1,5 @@
 server {
-  listen 80 default_server;
+  listen $PORT default_server;
 
   location / {
     include  /etc/nginx/mime.types;
@@ -9,7 +9,6 @@ server {
   }
 
   location /api {
-       rewrite /api/(.*) /$1  break;
        proxy_pass https://walmart-api-rest.herokuapp.com;
   }
 }
