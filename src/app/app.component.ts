@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.word = "";
+    this.word = null;
   }
 
   onSubmit(object) {

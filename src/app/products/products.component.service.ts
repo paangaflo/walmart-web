@@ -11,9 +11,14 @@ export class ProductsService {
   constructor(private httpClient: HttpClient) { }
 
   public getProducts(search: string): Observable<any>{
-    let params = new HttpParams();
-    params = params.append('search', search);
+  
+    if(search){
+      let params = new HttpParams();
+      params = params.append('search', search);
 
-    return this.httpClient.get("/api/products", {params: params});
+      return this.httpClient.get("/api/products", {params: params});
+    }
+    
+    return this.httpClient.get("/api/products");
   }
 }
